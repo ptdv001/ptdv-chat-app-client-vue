@@ -1,0 +1,8 @@
+{
+  "hello.world": "Bonjour Monde",
+  "status.online": "En ligne",
+  "status.offline": "Hors ligne",
+  "status.away": "Une façon",
+  "status.busy": "Occupé",
+  "status.unknown": "Inconnu"
+}

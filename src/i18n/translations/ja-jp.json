@@ -1,0 +1,8 @@
+{
+  "hello.world": "こんにちは世界",
+  "status.online": "オンライン",
+  "status.offline": "オフライン",
+  "status.away": "離れて",
+  "status.busy": "忙しい",
+  "status.unknown": "道の"
+}

@@ -1,0 +1,8 @@
+{
+  "hello.world": "Hello World",
+  "status.online": "Online",
+  "status.offline": "Offline",
+  "status.away": "Away",
+  "status.busy": "Busy",
+  "status.unknown": "Unknown"
+}

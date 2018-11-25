@@ -1,0 +1,66 @@
+{
+  "en-us": {
+    "short": {
+      "year": "numeric",
+      "month": "short",
+      "day": "numeric"
+    },
+    "long": {
+      "year": "numeric",
+      "month": "short",
+      "day": "numeric",
+      "weekday": "short",
+      "hour": "numeric",
+      "minute": "numeric",
+      "hour12": true
+    }
+  },
+  "fr-fr": {
+    "short": {
+      "day": "numeric",
+      "month": "numeric",
+      "year": "numeric"
+    },
+    "long": {
+      "day": "numeric",
+      "month": "short",
+      "year": "numeric",
+      "weekday": "short",
+      "hour": "numeric",
+      "minute": "numeric",
+      "hour12": false
+    }
+  },
+  "es-es": {
+    "short": {
+      "day": "numeric",
+      "month": "numeric",
+      "year": "numeric"
+    },
+    "long": {
+      "day": "numeric",
+      "month": "short",
+      "year": "numeric",
+      "weekday": "short",
+      "hour": "numeric",
+      "minute": "numeric",
+      "hour12": false
+    }
+  },
+  "ja-jp": {
+    "short": {
+      "year": "numeric",
+      "month": "short",
+      "day": "numeric"
+    },
+    "long": {
+      "year": "numeric",
+      "month": "short",
+      "day": "numeric",
+      "weekday": "short",
+      "hour": "numeric",
+      "minute": "numeric",
+      "hour12": true
+    }
+  }
+}

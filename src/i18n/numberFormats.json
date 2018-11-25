@@ -1,0 +1,26 @@
+{
+  "en-us": {
+    "currency": {
+      "style": "currency",
+      "currency": "USD"
+    }
+  },
+  "fr-fr": {
+    "currency": {
+      "style": "currency",
+      "currency": "EUR"
+    }
+  },
+  "es-es": {
+    "currency": {
+      "style": "currency",
+      "currency": "EUR"
+    }
+  },
+  "ja-jp": {
+    "currency": {
+      "style": "currency",
+      "currency": "YEN"
+    }
+  }
+}
