@@ -9,7 +9,7 @@
     "inspect": "vue-cli-service inspect"
   },
   "dependencies": {
-    "ptdv-style-guide": "0.0.2",
+    "ptdv-style-guide": "0.0.4",
     "vue": "^2.5.17",
     "vue-i18n": "^8.3.2",
     "vue-moment": "^4.0.0",

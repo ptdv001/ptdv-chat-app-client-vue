@@ -1,0 +1,14 @@
+
+
+//
+// Screen Sizes
+//
+$s-screen-size: 321px; //TODO Double check with Bootstrap use theres prob
+$m-screen-size: 576px;
+$l-screen-size: 961px;
+$xl-screen-size: 1401px;
+
+$small-screen-and-up: "only screens and (min-width: #{$s-screen-size})";
+$medium-screen-and-up: "only screens and (min-width: #{$m-screen-size})";
+$large-screen-and-up: "only screens and (min-width: #{$l-screen-size})";
+$xlarge-screen-and-up: "only screens and (min-width: #{$xl-screen-size})";
