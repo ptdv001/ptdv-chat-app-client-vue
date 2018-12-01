@@ -1,1 +1,75 @@
-// TODO add some base styles here
+@import "_variables";
+@import "_mixins";
+
+html, body {
+  //background if any here
+
+  font-size: 16px;  // Probably browser default but just to be sure
+}
+
+//body {
+  //classwide for body children
+//}
+
+h1 {
+  text-transform: uppercase;
+}
+
+// Full width button
+.btn { width: 100%; }
+
+// Hide text in XS and Small but show for Medium and up
+.ptdv-text-xs-hide { font-size: 0; }
+
+// Truncate line after 2 lines
+// usage e.g. <span class=ptdv-truncate-2">This text is long and will truncate at the end of the second line</span>
+.ptdv-truncate-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  box-orient: vertical;
+  -webkit-box-orient: vertical;
+
+  //TODO rewrite as mixin for N lines
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+}
+
+.loading-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: $custom1;
+}
+
+// Note: Use Font Awesome Spinner instead
+// .spinner-medium {
+//   width: 40px;
+//   height: 40px;
+//   background-image: url("#{$spinner-medium-image-path}");
+//   background-position: -280px 0;
+//   display: inline-block;
+//   animation: spinner-medium .8s steps(21) infinite;
+// }
+// @include spinner-keyframes(".spinner-medium", keyframes-loading, 100%, .8s, 20);
+
+// Shows an infinite progress bar
+// e.g. <div class="ptdv-progressbar" style="height: 20px"></div>
+@keyframes ptdvProgressbar {
+  0% { background-position: -468px 0; }
+  100% { background-position: 468px 0; }
+}
+.ptdv-progressbar {
+  position: relative;
+  background: rgb(0, 21, 51);
+  background: linear-gradient(90deg, rgba(0, 21, 51, 0.2) 0%, rgba(0, 21, 51, 0.4) 50%, rgba(0, 21, 51, 0.2) 100%);
+  border-radius: 3px;
+  animation-name: ptdvProgressbar;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
