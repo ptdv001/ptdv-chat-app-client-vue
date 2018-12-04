@@ -23,6 +23,16 @@
       <div>Truncate after two lines:</div>
       <span class="ptdv-truncate-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
     </div>
+
+    <br/>
+
+    <h3>FontAwesome Icons</h3>
+    Solid Icons (decorative) <fa-icon icon="home" aria-hidden />, (informative) <fa-icon icon="heart" class="fa-2x" aria-hidden="false" title="Black Heart" />
+    <br />
+    Custom Icons <fa-icon :icon="['ptdv', 'home']" /> <fa-icon :icon="['ptdv', 'heart']" />
+    <br />
+    (come back to accessibility: https://fontawesome.com/how-to-use/on-the-web/other-topics/accessibility)
+
   </div>
 </template>
 
