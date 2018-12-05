@@ -33,12 +33,45 @@
     <br />
     (come back to accessibility: https://fontawesome.com/how-to-use/on-the-web/other-topics/accessibility)
 
+    <br/>
+    <br/>
+    <br/>
+
+    <h3>Some data from a service</h3>
+    <div v-if="exampleData">{{exampleData}}</div>
   </div>
 </template>
 
 <script>
+import ExampleAPIService from '../services/example-api-service';
+
 export default {
   name: "home",
-  components: {}
+  components: {},
+  data() {
+    return {
+      loadComplete: false,
+      exampleData: null
+    }
+  },
+  created() {
+    this.getExample(123);
+  },
+  methods: {
+    getExample(exampleId) {
+      const exampleAPIService = new ExampleAPIService();
+      this.loadComplete = false;
+
+      exampleAPIService.getExample(exampleId)
+        .then(resultThing => {
+          if (resultThing) {
+            setTimeout(() => {
+              this.loadComplete = true;
+              this.exampleData = resultThing.message;
+            }, 2000);
+          }
+        });
+    }
+  }
 };
 </script>
