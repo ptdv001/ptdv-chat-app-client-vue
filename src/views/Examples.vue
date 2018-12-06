@@ -1,17 +1,7 @@
 <template>
   <section class="examples">
-      <h1>Examples</h1>
+      <h1>Examples {{route}}</h1>
       <p>A temporary page for temporary examples the should be moved to chat components once a related on exists.</p>
-
-      <h2>Localization</h2>
-      <p>Test Currency: <strong>{{$n(100, 'currency')}}</strong></p>
-      <p>Test Date short: <strong>{{$d(new Date(), 'short', locale)}}</strong></p>
-      <p>Test Date long: <strong>{{$d(new Date(), 'long', locale)}}</strong></p>
-
-      <!-- simpler use would be {{new Date() | moment('add', '2 years')}} -->
-      <p>Manipulate time (+2years) <strong>{{$d(addTwoYearsToTodayUsingMoment, 'short', locale)}}</strong></p>
-
-      <hr>
 
       <h2>Icons</h2>
       <p>Solid Icons (decorative) <fa-icon icon="home" aria-hidden />, (informative) <fa-icon icon="heart" class="fa-2x" aria-hidden="false" title="Black Heart" /></p>
@@ -38,8 +28,6 @@
         <template v-else>loading..</template>
       </p>
       <br>
-      <p>Filter mask email: {{'pthiessen@blizzard.com' | emailMask}}</p>
-      <br>
 
       <hr>
 
@@ -50,8 +38,6 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { i18n } from "../i18n";
 import ExampleAPIService from '../services/example-api-service';
 import PtdvFocus from '../directives/focus';
 import PtdvScrollToElement from '../directives/scrollToElement';
@@ -71,12 +57,6 @@ export default {
   computed: {
     route() {
       return this.$route.params.id;
-    },
-    locale() {
-      return i18n.locale;
-    },
-    addTwoYearsToTodayUsingMoment() {
-      return Vue.filter("moment")(new Date(), "add", "2 years");
     }
   },
   created() {
