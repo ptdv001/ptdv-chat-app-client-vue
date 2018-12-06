@@ -4,7 +4,6 @@
 
     <p>Loc Test, message status away: <strong>{{getStatus('AWAY')}}</strong></p>
 
-    Mask Email: {{'pthiessen@blizzard.com' | emailMask}}
   </div>
 </template>
 
