@@ -19,6 +19,10 @@ import './filters';
 library.add(far, fas, PTDV_CUSTOM_ICONS);
 Vue.component('fa-icon', FontAwesomeIcon)
 
+// Would be global if added here but can also do component import e.g. in Home.vue
+// import FocusDirective from './directives/focus';
+// Vue.directive('ptdv-focus', FocusDirective);
+
 router.beforeEach((to, from, next) => {
   //i18n set by query param
   if (to.query && to.query.locale) {

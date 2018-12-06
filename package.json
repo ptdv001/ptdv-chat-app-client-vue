@@ -11,6 +11,7 @@
   "dependencies": {
     "@fortawesome/vue-fontawesome": "^0.1.2",
     "ptdv-style-guide": "0.0.9",
+    "uuid": "^3.3.2",
     "vue": "^2.5.17",
     "vue-i18n": "^8.3.2",
     "vue-moment": "^4.0.0",

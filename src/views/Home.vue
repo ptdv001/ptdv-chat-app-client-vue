@@ -10,7 +10,7 @@
       <router-link :to="{name: 'ChatSettings'}">Chat Settings</router-link>
     </p>
 
-    <button class="btn">Test</button>
+    <button class="btn" v-ptdv-scroll-to-element="'#scroll-here-example'">Test</button>
 
     <div class="text-left">
       <span>Progress Bar Infinite:</span>
@@ -39,15 +39,27 @@
 
     <h3>Some data from a service</h3>
     <div v-if="exampleData">{{exampleData}}</div>
+
+    <br/>
+    <br/>
+    <br/>
+    <h3>Focus directive below</h3>
+    <input v-ptdv-focus id="scroll-here-example">
   </div>
 </template>
 
 <script>
 import ExampleAPIService from '../services/example-api-service';
+import PtdvFocus from '../directives/focus';
+import PtdvScrollToElement from '../directives/scrollToElement';
 
 export default {
   name: "home",
   components: {},
+  directives: {
+    PtdvFocus,
+    PtdvScrollToElement
+  },
   data() {
     return {
       loadComplete: false,
