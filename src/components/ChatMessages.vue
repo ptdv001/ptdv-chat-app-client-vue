@@ -1,30 +1,37 @@
 <template>
   <div>
-    <h1>Chat Messages {{route}} </h1>
-
-    <p>Loc Test, message status away: <strong>{{getStatus('AWAY')}}</strong></p>
-
+    <ul v-if="messages" class="messages">
+      <li v-for="message in messages" :key="message.id" class="message row">
+        <span class="user col-1">{{message.user}}</span>
+        <span class="message-message ptdv-truncate-2 col-10">{{message.message}}</span>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
-import { getLocalizedStatus } from "../utils/status.js";
-
 export default {
   name: "ChatMessages",
-  props: {},
-  computed: {
-    route() {
-      return this.$route.params.id;
-    }
-  },
-  methods: {
-    getStatus(statusId) {
-      return getLocalizedStatus(statusId);
+  props: {
+    messages: {
+      type: Array
     }
   }
 };
 </script>
 
 <style scoped lang="scss">
+.messages {
+  .message {
+    display: flex;
+    margin-bottom: 1rem;
+
+    .user {
+      margin-right: 1rem;
+      white-space: nowrap;
+    }
+
+    .message-message {}
+  }
+}
 </style>

@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Chat from './views/Chat.vue'
 import Examples from './views/Examples';
+import Settings from './views/Settings';
 
 // Lazy loaded component pages below fail at path resolution run time
 // when stored in a variable for some reason..
@@ -42,6 +43,11 @@ export default new Router({
           component: () => import('./components/ChatApp.vue')
         }
       ]
+    },
+    {
+      path: '/settings',
+      name: 'settings',
+      component: Settings
     },
     {
       path: '/examples',
