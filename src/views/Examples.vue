@@ -15,19 +15,6 @@
       <br>
       <div>Progress Bar Infinite: <div class="ptdv-progressbar" style="height: 20px"></div></div>
       <br>
-      <div style="width: 25em; border: 1px solid grey;">
-        <div>Truncate after two lines:</div>
-        <span class="ptdv-truncate-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
-      </div>
-      <br>
-      <p>Auto Focus directive <input v-ptdv-focus id="scroll-here-example"></p>
-      <br>
-      <p>
-        Some data from a service:
-        <template v-if="exampleData"><span class="text-success">{{exampleData}}</span></template>
-        <template v-else>loading..</template>
-      </p>
-      <br>
 
       <hr>
 
@@ -38,14 +25,11 @@
 </template>
 
 <script>
-import ExampleAPIService from '../services/example-api-service';
-import PtdvFocus from '../directives/focus';
 import PtdvScrollToElement from '../directives/scrollToElement';
 
 export default {
   name: 'examples',
   directives: {
-    PtdvFocus,
     PtdvScrollToElement
   },
   data() {
@@ -57,25 +41,6 @@ export default {
   computed: {
     route() {
       return this.$route.params.id;
-    }
-  },
-  created() {
-    this.getExample(123);
-  },
-  methods: {
-    getExample(exampleId) {
-      const exampleAPIService = new ExampleAPIService();
-      this.loadComplete = false;
-
-      exampleAPIService.getExample(exampleId)
-        .then(resultThing => {
-          if (resultThing) {
-            setTimeout(() => {
-              this.loadComplete = true;
-              this.exampleData = resultThing.message;
-            }, 2000);
-          }
-        });
     }
   }
 }

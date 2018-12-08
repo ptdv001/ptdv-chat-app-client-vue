@@ -1,18 +1,21 @@
 <template>
   <div>
     <h1>Chat <span v-if="chatName">{{chatName}}</span> <strong>{{$t('hello.world')}}</strong></h1>
-    <chat-messages :messages="messages" />
+    <chat-messages :messages="messages" ref="chatMessages" />
+    <chat-compose @message="sendMessage" />
   </div>
 </template>
 
 <script>
 import ChatService from '../services/chat-service.js';
 import ChatMessages from './ChatMessages.vue';
+import ChatCompose from './ChatCompose.vue';
 
 export default {
   name: "ChatApp",
   components: {
-    ChatMessages
+    ChatMessages,
+    ChatCompose
   },
   data() {
     return {
@@ -37,7 +40,21 @@ export default {
           this.loadComplete = true;
           this.chatName = response.name;
           this.messages = response.messages;
+
+          this.$refs.chatMessages.scrollMessages();
         });
+    },
+    sendMessage(messageContent) {
+      //TODO when have an API send to server with a listener method here to call addMessage instead
+      this.addMessage({
+        id: this.messages.length + 1,
+        user: 'new user',
+        message: messageContent
+      });
+    },
+    addMessage(newMessage) {
+      this.messages.push(newMessage);
+      this.$refs.chatMessages.scrollMessages();
     }
   }
 };
