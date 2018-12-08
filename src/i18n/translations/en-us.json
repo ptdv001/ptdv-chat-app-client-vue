@@ -4,5 +4,6 @@
   "status.offline": "Offline",
   "status.away": "Away",
   "status.busy": "Busy",
-  "status.unknown": "Unknown"
+  "status.unknown": "Unknown",
+  "status.typing": "Typing.."
 }

@@ -4,5 +4,6 @@
   "status.offline": "Hors ligne",
   "status.away": "Une façon",
   "status.busy": "Occupé",
-  "status.unknown": "Inconnu"
+  "status.unknown": "Inconnu",
+  "status.typing": "Dactylographie.."
 }

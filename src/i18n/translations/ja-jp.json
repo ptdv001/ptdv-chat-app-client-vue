@@ -4,5 +4,6 @@
   "status.offline": "オフライン",
   "status.away": "離れて",
   "status.busy": "忙しい",
-  "status.unknown": "道の"
+  "status.unknown": "道の",
+  "status.typing": "タイピング.."
 }

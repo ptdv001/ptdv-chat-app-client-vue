@@ -8,9 +8,12 @@
         id="chat-compose"
         type="text"
         required
+        pattern="composeWhiteListRegex"
+        autocomplete="off"
         :placeholder="placeholder"
-        pattern="[a-z|A-Z|0-9]{1,}"
-        v-ptdv-focus>
+        v-ptdv-focus
+        @keypress="setStatusTyping"
+        @blur="setStatusNotTyping">
       <!-- TODO consider UUID gen for ID for reusability -->
       <button class="chat-send col-1" type="submit">Send</button>
     </form>
@@ -18,12 +21,18 @@
 </template>
 
 <script>
+import _ from 'lodash';
 import PtdvFocus from '../directives/focus';
 
 export default {
   name: "ChatCompose",
   directives: {
     PtdvFocus
+  },
+  data() {
+    return {
+      composeWhiteListRegex: '[a-z|A-Z|0-9|\\s]{1,}'
+    };
   },
   props: {
     placeholder: {
@@ -40,6 +49,19 @@ export default {
         this.$emit('message', message);
         messageEl.value = '';
       }
+
+      this.setStatusNotTyping();
+    },
+    setStatusTyping() {
+      _.debounce(() => {
+        this.$store.commit('setUserStatus', 'TYPING');
+      }, 200)();
+    },
+    setStatusNotTyping() {
+      setTimeout(() => {
+        // TODO some kind of reset-previous status, maybe in store actions
+        this.$store.commit('setUserStatus', 'ONLINE');
+      }, 500);
     }
   }
 };

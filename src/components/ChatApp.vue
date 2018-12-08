@@ -42,6 +42,9 @@ export default {
           this.messages = response.messages;
 
           this.$refs.chatMessages.scrollMessages();
+
+          //TODO
+          this.$store.commit('setUserStatus', 'ONLINE');
         });
     },
     sendMessage(messageContent) {

@@ -4,5 +4,6 @@
   "status.offline": "Desconectado",
   "status.away": "Lejos",
   "status.busy": "Ocupado",
-  "status.unknown": "Desconocido"
+  "status.unknown": "Desconocido",
+  "status.typing": "Mecanografía.."
 }

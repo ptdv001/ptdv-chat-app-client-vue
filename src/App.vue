@@ -7,13 +7,9 @@
       <div :class="['car', color]">...
     -->
 
-    <header>
-      <h1><router-link :to="{name: 'home'}">PTDV-Chat</router-link></h1>
-      <div><router-link :to="{name: 'settings'}">{{email | emailMask}}</router-link> (account settings)</div>
-      Status <strong>{{getStatus('AWAY')}}</strong>
-    </header>
+    <nav-bar />
 
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
@@ -73,19 +69,12 @@
         //NOTE ALSO: activated and deactivated. These are for keep-alive components
   }
  */
-import { getLocalizedStatus } from "./utils/status.js";
+import NavBar from './components/NavBar.vue';
 
 export default {
   name: "App",
-  data() {
-    return {
-      email: 'pthiessen@blizzard.com'
-    };
-  },
-  methods: {
-    getStatus(statusId) {
-      return getLocalizedStatus(statusId);
-    }
+  components: {
+    NavBar
   }
 };
 </script>

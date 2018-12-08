@@ -5,6 +5,7 @@ export const STATUS_LIST = {
   OFFLINE: { locKey: 'status.offline' },
   AWAY: { locKey: 'status.away' },
   BUSY: { locKey: 'status.busy' },
+  TYPING: { locKey: 'status.typing' },
   UNKNOWN: { locKey: 'status.unknown' }
 };
 
