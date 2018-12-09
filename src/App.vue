@@ -9,6 +9,7 @@
 
     <nav-bar />
 
+    <!-- Note Router-View is for when the route has children and one is loaded dynamically -->
     <router-view />
   </div>
 </template>

@@ -19,7 +19,7 @@ export default {
   name: "NavBar",
   data() {
     return {
-      email: 'pthiessen@blizzard.com'
+      email: 'peter@someemail.com'
     };
   },
   computed: {

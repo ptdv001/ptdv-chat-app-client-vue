@@ -8,7 +8,7 @@
         id="chat-compose"
         type="text"
         required
-        pattern="composeWhiteListRegex"
+        :pattern="composeWhiteListRegex"
         autocomplete="off"
         :placeholder="placeholder"
         v-ptdv-focus

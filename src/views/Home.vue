@@ -6,13 +6,13 @@
       <h2>Welcome to the Chats</h2>
     </div>
 
-    <h3>Current Chats</h3>
-    <ul class="chat-list">
-      <li>Go to <router-link :to="{name: 'ChatApp', params: { id: 1 }}">Test Chat 1</router-link></li>
-      <li>Go to <router-link :to="{name: 'ChatApp', params: { id: 2 }}">Test Chat 2</router-link></li>
-    </ul>
+    <section>
+      <h3>TODO Login</h3>
+      <router-link :to="{name: 'chats'}">Go To Chats List</router-link>
+    </section>
 
-    <p>Go to Examples <router-link :to="{name: 'examples'}">Examples</router-link></p>
+    <br><br><br><br><br><br>
+    <p>Go to Examples <router-link :to="{name: 'temp-examples'}">Examples</router-link></p>
   </div>
 </template>
 

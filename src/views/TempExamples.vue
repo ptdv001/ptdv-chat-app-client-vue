@@ -28,7 +28,7 @@
 import PtdvScrollToElement from '../directives/scrollToElement';
 
 export default {
-  name: 'examples',
+  name: 'temp-examples',
   directives: {
     PtdvScrollToElement
   },

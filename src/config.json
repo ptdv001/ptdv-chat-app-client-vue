@@ -1,0 +1,6 @@
+{
+  "api": {
+    "host": "http://localhost:8000",
+    "path": "api"
+  }
+}

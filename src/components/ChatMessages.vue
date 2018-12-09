@@ -2,7 +2,7 @@
   <section class="chat-messages-container">
     <ul v-if="messages" class="messages">
       <li v-for="message in messages" :key="message.id" class="message">
-        <span class="user col-1 text-right">{{message.user}}</span>
+        <span class="user col-1 text-right">{{message.username}}</span>
         <span class="message-message ptdv-truncate-2 col-10">{{message.message}}</span>
       </li>
     </ul>
