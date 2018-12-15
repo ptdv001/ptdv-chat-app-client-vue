@@ -1,5 +1,9 @@
 # chat-app-v3
 
+*Future Work*
+- future work: use vuex-persistedstate to store session state
+- future work: oath tutorials and try to add Node oath login
+
 ## Project setup
 ```
 npm install
